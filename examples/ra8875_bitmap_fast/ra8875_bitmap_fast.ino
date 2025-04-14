@@ -12,14 +12,14 @@
 // Connect MOSI to UNO Digital #11 (Hardware SPI MOSI)
 #define RA8875_INT 3
 #define RA8875_CS 10
-#define RA8875_RESET 9
+#define RA8875_RESET 9 // Pin definatation
 
-Adafruit_RA8875 tft = Adafruit_RA8875(RA8875_CS, RA8875_RESET);
+Adafruit_RA8875 tft = Adafruit_RA8875(RA8875_CS, RA8875_RESET); // RA8875 instance
 
 void setup () {
   Serial.begin(9600);
 
-  if (!SD.begin(sd_cs))
+  if (!SD.begin(sd_cs)) // initailze SD card
   {
     Serial.println("initialization failed!");
     return;
